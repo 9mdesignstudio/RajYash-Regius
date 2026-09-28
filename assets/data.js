@@ -1161,27 +1161,6 @@ window.MEDIA = {
    "full": "assets/photos/full/IMG_7759.JPG",
    "w": 4000,
    "h": 6000
-  },
-  {
-   "name": "IMG_7760",
-   "thumb": "assets/photos/thumbs/IMG_7760.jpg",
-   "full": "assets/photos/full/IMG_7760.JPG",
-   "w": 6000,
-   "h": 4000
-  },
-  {
-   "name": "KXY03050",
-   "thumb": "assets/photos/thumbs/KXY03050.jpg",
-   "full": "assets/photos/full/KXY03050.JPG",
-   "w": 6000,
-   "h": 4000
-  },
-  {
-   "name": "KXY03051",
-   "thumb": "assets/photos/thumbs/KXY03051.jpg",
-   "full": "assets/photos/full/KXY03051.JPG",
-   "w": 6000,
-   "h": 4000
   }
  ],
  "videos": [
