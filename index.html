@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rajyash Regus | 9M Design Studio</title>
+  <meta name="description" content="Rajyash Regus residence: interior design by 9M Design Studio. Photographs and films.">
+  <link rel="icon" type="image/png" href="assets/mark-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="9M Design Studio home">
+      <img class="brand-mark" src="assets/mark-dark.png" alt="" width="28" height="40">
+      <span class="brand-text">
+        <span class="brand-name">9M Design</span>
+        <span class="brand-sub">Studio</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#photos" data-nav="photos">Photographs</a>
+      <a href="#videos" data-nav="videos">Films</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-media" style="background-image:url('assets/hero.jpg')"></div>
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Residential Interior &middot; Project Portfolio</p>
+      <h1>Rajyash <em>Regus</em></h1>
+      <p class="hero-lede">Layered textures, warm timber and soft light, composed into a calm, modern home.</p>
+      <div class="hero-stats">
+        <div><strong id="stat-photos">&ndash;</strong><span>Photographs</span></div>
+        <div><strong id="stat-videos">&ndash;</strong><span>Films</span></div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#photos">View Photographs</a>
+        <a class="btn btn-ghost" href="#videos">Watch Films</a>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#photos" aria-label="Scroll to gallery"><span></span></a>
+  </section>
+
+  <main>
+    <section class="section" id="photos">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow eyebrow-dark">01 &mdash; Gallery</p>
+          <h2>Photographs</h2>
+        </div>
+        <div class="filters" role="tablist" aria-label="Filter photographs">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="landscape" role="tab" aria-selected="false">Landscape</button>
+          <button class="chip" data-filter="portrait" role="tab" aria-selected="false">Portrait</button>
+        </div>
+      </div>
+      <div class="photo-grid" id="photo-grid"></div>
+    </section>
+
+    <section class="section section-alt" id="videos">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow eyebrow-dark">02 &mdash; Motion</p>
+          <h2>Films</h2>
+        </div>
+        <p class="section-note">Short walkthroughs of the finished spaces. Tap a film to play.</p>
+      </div>
+      <div class="video-grid" id="video-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/logo-light.png" alt="9M Design Studio" class="footer-logo" width="152" height="144">
+    <p>Interior Architecture &amp; Design</p>
+    <a href="#top" class="back-top">Back to top &uarr;</a>
+    <small>&copy; <span id="year"></span> 9M Design Studio. All rights reserved.</small>
+  </footer>
+
+  <!-- Photo lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <div class="lb-top">
+      <span class="lb-counter" id="lb-counter"></span>
+      <div class="lb-tools">
+        <a class="lb-btn" id="lb-open" href="#" target="_blank" rel="noopener" aria-label="Open original" title="Open original">
+          <svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        </a>
+        <button class="lb-btn" id="lb-close" aria-label="Close" title="Close (Esc)">
+          <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <figure class="lb-stage" id="lb-stage">
+      <img class="lb-img lb-low" id="lb-low" alt="">
+      <img class="lb-img lb-full" id="lb-full" alt="">
+      <div class="lb-loader" id="lb-loader"><span></span>Loading full resolution</div>
+    </figure>
+    <button class="lb-nav lb-next" id="lb-next" aria-label="Next photo">
+      <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <div class="lb-strip" id="lb-strip"></div>
+  </div>
+
+  <!-- Video player -->
+  <div class="player" id="player" role="dialog" aria-modal="true" aria-label="Video player" hidden>
+    <button class="lb-btn player-close" id="player-close" aria-label="Close" title="Close (Esc)">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="player-frame">
+      <video id="player-video" controls playsinline preload="none"></video>
+    </div>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
