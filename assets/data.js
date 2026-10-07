@@ -342,6 +342,22 @@ window.MEDIA = {
    "w": 720,
    "h": 1280,
    "duration": 11.7
+  },
+  {
+   "name": "1790661015386631",
+   "src": "assets/videos/1790661015386631.mp4",
+   "poster": "assets/videos/posters/1790661015386631.jpg",
+   "w": 720,
+   "h": 1280,
+   "duration": 9.8
+  },
+  {
+   "name": "Kitchen2",
+   "src": "assets/videos/Kitchen2.mp4",
+   "poster": "assets/videos/posters/Kitchen2.jpg",
+   "w": 720,
+   "h": 1280,
+   "duration": 17.2
   }
  ]
 };
